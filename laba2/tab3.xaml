@@ -1,0 +1,14 @@
+﻿<Window x:Class="laba2.tab3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:laba2"
+        mc:Ignorable="d"
+        Title="tab3" Height="450" Width="800">
+    <Grid>
+        <DataGrid x:Name="Table" Margin="100"/>
+        <Button x:Name="Add3" HorizontalAlignment="Center" VerticalAlignment="Bottom" MinWidth="300" MinHeight="50" Margin="30" Click="Add3_Click"/>
+        <Frame x:Name="Frame"/>
+    </Grid>
+</Window>
