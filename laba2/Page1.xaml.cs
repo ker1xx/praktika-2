@@ -21,8 +21,8 @@ namespace laba2
     /// </summary>
     public partial class Page1 : Page
     {
-        disciplinesTableAdapter dis = new disciplinesTableAdapter();
-        teachersTableAdapter teachers = new teachersTableAdapter();
+        disciplinesssTableAdapter dis = new disciplinesssTableAdapter();
+        teachersssTableAdapter teachers = new teachersssTableAdapter();
         tab1 window;
         public Page1(tab1 window)
         {

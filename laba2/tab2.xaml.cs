@@ -1,5 +1,7 @@
-﻿using System;
+﻿using laba2.DataSet1TableAdapters;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,14 +21,22 @@ namespace laba2
     /// </summary>
     public partial class tab2 : Window
     {
+        practiseeeTableAdapter prac = new practiseeeTableAdapter();
         public tab2()
         {
             InitializeComponent();
         }
 
-        private void Add2_Click(object sender, RoutedEventArgs e)
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Content = new Page2(this);
+
+        }
+
+        private void Add1_Click(object sender, RoutedEventArgs e)
+        {
+            prac.DeleteQuery((int)(Table.SelectedItem as DataRowView).Row[0]);
+            Table.ItemsSource = prac.GetData();
         }
     }
 }

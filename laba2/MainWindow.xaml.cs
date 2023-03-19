@@ -22,9 +22,9 @@ namespace laba2
     public partial class MainWindow : Window
     {
 
-        teachersTableAdapter table1 = new teachersTableAdapter();
-        practiseTableAdapter table2 = new practiseTableAdapter();
-        disciplinesTableAdapter table3 = new disciplinesTableAdapter();
+        teachersssTableAdapter table1 = new teachersssTableAdapter();
+        practiseeeTableAdapter table2 = new practiseeeTableAdapter();
+        disciplinesssTableAdapter table3 = new disciplinesssTableAdapter();
         public MainWindow()
         {
             InitializeComponent();

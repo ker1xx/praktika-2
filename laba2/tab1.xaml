@@ -8,7 +8,9 @@
         Title="Window1" Height="450" Width="800">
     <Grid>
         <DataGrid x:Name="Table" Margin="100"/>
-        <Button x:Name="Add1" HorizontalAlignment="Center" VerticalAlignment="Bottom" MinWidth="300" MinHeight="50" Margin="30" Click="Add1_Click"/>
+        <Button Content="add" x:Name="Add1" HorizontalAlignment="Left" VerticalAlignment="Bottom" MinWidth="200" MinHeight="50" Margin="30" Click="Add1_Click"/>
+        <Button Content="delete" x:Name="Delete" HorizontalAlignment="Right" 
+                VerticalAlignment="Bottom" MinWidth="200" MinHeight="50" Margin="30" Click="Delete_Click"/>
         <Frame x:Name="a1"/>
     </Grid>
 </Window>

@@ -30,9 +30,9 @@ namespace laba2 {
         
         private practiseDataTable tablepractise;
         
-        private global::System.Data.DataRelation relationFK__teachers__id_dis__5070F446;
+        private global::System.Data.DataRelation relationFK__teachers__id_dis__571DF1D5;
         
-        private global::System.Data.DataRelation relationFK__practise__id_of___5535A963;
+        private global::System.Data.DataRelation relationFK__practise__id_of___5629CD9C;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -246,8 +246,8 @@ namespace laba2 {
                     this.tablepractise.InitVars();
                 }
             }
-            this.relationFK__teachers__id_dis__5070F446 = this.Relations["FK__teachers__id_dis__5070F446"];
-            this.relationFK__practise__id_of___5535A963 = this.Relations["FK__practise__id_of___5535A963"];
+            this.relationFK__teachers__id_dis__571DF1D5 = this.Relations["FK__teachers__id_dis__571DF1D5"];
+            this.relationFK__practise__id_of___5629CD9C = this.Relations["FK__practise__id_of___5629CD9C"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -264,14 +264,14 @@ namespace laba2 {
             base.Tables.Add(this.tableteachers);
             this.tablepractise = new practiseDataTable();
             base.Tables.Add(this.tablepractise);
-            this.relationFK__teachers__id_dis__5070F446 = new global::System.Data.DataRelation("FK__teachers__id_dis__5070F446", new global::System.Data.DataColumn[] {
+            this.relationFK__teachers__id_dis__571DF1D5 = new global::System.Data.DataRelation("FK__teachers__id_dis__571DF1D5", new global::System.Data.DataColumn[] {
                         this.tabledisciplines.idColumn}, new global::System.Data.DataColumn[] {
                         this.tableteachers.id_disciplineColumn}, false);
-            this.Relations.Add(this.relationFK__teachers__id_dis__5070F446);
-            this.relationFK__practise__id_of___5535A963 = new global::System.Data.DataRelation("FK__practise__id_of___5535A963", new global::System.Data.DataColumn[] {
+            this.Relations.Add(this.relationFK__teachers__id_dis__571DF1D5);
+            this.relationFK__practise__id_of___5629CD9C = new global::System.Data.DataRelation("FK__practise__id_of___5629CD9C", new global::System.Data.DataColumn[] {
                         this.tableteachers.idColumn}, new global::System.Data.DataColumn[] {
                         this.tablepractise.id_of_teacherColumn}, false);
-            this.Relations.Add(this.relationFK__practise__id_of___5535A963);
+            this.Relations.Add(this.relationFK__practise__id_of___5629CD9C);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -761,7 +761,7 @@ namespace laba2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public teachersRow AddteachersRow(string name, string surname, string lastname, disciplinesRow parentdisciplinesRowByFK__teachers__id_dis__5070F446) {
+            public teachersRow AddteachersRow(string name, string surname, string lastname, disciplinesRow parentdisciplinesRowByFK__teachers__id_dis__571DF1D5) {
                 teachersRow rowteachersRow = ((teachersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -769,8 +769,8 @@ namespace laba2 {
                         surname,
                         lastname,
                         null};
-                if ((parentdisciplinesRowByFK__teachers__id_dis__5070F446 != null)) {
-                    columnValuesArray[4] = parentdisciplinesRowByFK__teachers__id_dis__5070F446[0];
+                if ((parentdisciplinesRowByFK__teachers__id_dis__571DF1D5 != null)) {
+                    columnValuesArray[4] = parentdisciplinesRowByFK__teachers__id_dis__571DF1D5[0];
                 }
                 rowteachersRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowteachersRow);
@@ -976,6 +976,8 @@ namespace laba2 {
             
             private global::System.Data.DataColumn columncount_of_hours;
             
+            private global::System.Data.DataColumn columnid;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public practiseDataTable() {
@@ -1043,6 +1045,14 @@ namespace laba2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1078,19 +1088,27 @@ namespace laba2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public practiseRow AddpractiseRow(teachersRow parentteachersRowByFK__practise__id_of___5535A963, string date_of_begining, string date_of_ending, int count_of_hours) {
+            public practiseRow AddpractiseRow(teachersRow parentteachersRowByFK__practise__id_of___5629CD9C, string date_of_begining, string date_of_ending, int count_of_hours) {
                 practiseRow rowpractiseRow = ((practiseRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         date_of_begining,
                         date_of_ending,
-                        count_of_hours};
-                if ((parentteachersRowByFK__practise__id_of___5535A963 != null)) {
-                    columnValuesArray[0] = parentteachersRowByFK__practise__id_of___5535A963[0];
+                        count_of_hours,
+                        null};
+                if ((parentteachersRowByFK__practise__id_of___5629CD9C != null)) {
+                    columnValuesArray[0] = parentteachersRowByFK__practise__id_of___5629CD9C[0];
                 }
                 rowpractiseRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowpractiseRow);
                 return rowpractiseRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public practiseRow FindByid(int id) {
+                return ((practiseRow)(this.Rows.Find(new object[] {
+                            id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1114,6 +1132,7 @@ namespace laba2 {
                 this.columndate_of_begining = base.Columns["date_of_begining"];
                 this.columndate_of_ending = base.Columns["date_of_ending"];
                 this.columncount_of_hours = base.Columns["count_of_hours"];
+                this.columnid = base.Columns["id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1127,11 +1146,21 @@ namespace laba2 {
                 base.Columns.Add(this.columndate_of_ending);
                 this.columncount_of_hours = new global::System.Data.DataColumn("count_of_hours", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncount_of_hours);
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid}, true));
                 this.columndate_of_begining.AllowDBNull = false;
                 this.columndate_of_begining.MaxLength = 15;
                 this.columndate_of_ending.AllowDBNull = false;
                 this.columndate_of_ending.MaxLength = 15;
                 this.columncount_of_hours.AllowDBNull = false;
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.ReadOnly = true;
+                this.columnid.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1297,11 +1326,11 @@ namespace laba2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public teachersRow[] GetteachersRows() {
-                if ((this.Table.ChildRelations["FK__teachers__id_dis__5070F446"] == null)) {
+                if ((this.Table.ChildRelations["FK__teachers__id_dis__571DF1D5"] == null)) {
                     return new teachersRow[0];
                 }
                 else {
-                    return ((teachersRow[])(base.GetChildRows(this.Table.ChildRelations["FK__teachers__id_dis__5070F446"])));
+                    return ((teachersRow[])(base.GetChildRows(this.Table.ChildRelations["FK__teachers__id_dis__571DF1D5"])));
                 }
             }
         }
@@ -1384,10 +1413,10 @@ namespace laba2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public disciplinesRow disciplinesRow {
                 get {
-                    return ((disciplinesRow)(this.GetParentRow(this.Table.ParentRelations["FK__teachers__id_dis__5070F446"])));
+                    return ((disciplinesRow)(this.GetParentRow(this.Table.ParentRelations["FK__teachers__id_dis__571DF1D5"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__teachers__id_dis__5070F446"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__teachers__id_dis__571DF1D5"]);
                 }
             }
             
@@ -1406,11 +1435,11 @@ namespace laba2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public practiseRow[] GetpractiseRows() {
-                if ((this.Table.ChildRelations["FK__practise__id_of___5535A963"] == null)) {
+                if ((this.Table.ChildRelations["FK__practise__id_of___5629CD9C"] == null)) {
                     return new practiseRow[0];
                 }
                 else {
-                    return ((practiseRow[])(base.GetChildRows(this.Table.ChildRelations["FK__practise__id_of___5535A963"])));
+                    return ((practiseRow[])(base.GetChildRows(this.Table.ChildRelations["FK__practise__id_of___5629CD9C"])));
                 }
             }
         }
@@ -1480,12 +1509,23 @@ namespace laba2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public teachersRow teachersRow {
+            public int id {
                 get {
-                    return ((teachersRow)(this.GetParentRow(this.Table.ParentRelations["FK__practise__id_of___5535A963"])));
+                    return ((int)(this[this.tablepractise.idColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__practise__id_of___5535A963"]);
+                    this[this.tablepractise.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public teachersRow teachersRow {
+                get {
+                    return ((teachersRow)(this.GetParentRow(this.Table.ParentRelations["FK__practise__id_of___5629CD9C"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__practise__id_of___5629CD9C"]);
                 }
             }
             
@@ -1617,7 +1657,7 @@ namespace laba2.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class disciplinesTableAdapter : global::System.ComponentModel.Component {
+    public partial class disciplinesssTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1631,7 +1671,7 @@ namespace laba2.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public disciplinesTableAdapter() {
+        public disciplinesssTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1768,16 +1808,22 @@ namespace laba2.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, name_of_discipline FROM dbo.disciplines";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO [dbo].[disciplines] ([name_of_discipline]) VALUES (@name);";
+            this._commandCollection[1].CommandText = "DELETE FROM disciplines\r\nWHERE  (id = @Original_id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "name_of_discipline", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO [dbo].[disciplines] ([name_of_discipline]) VALUES (@name_of_disciplin" +
+                "e);\r\n";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name_of_discipline", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "name_of_discipline", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1934,14 +1980,38 @@ namespace laba2.DataSet1TableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertQuery(string name) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(int Original_id) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
-            if ((name == null)) {
-                throw new global::System.ArgumentNullException("name");
+            command.Parameters[0].Value = ((int)(Original_id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(string name_of_discipline) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            if ((name_of_discipline == null)) {
+                throw new global::System.ArgumentNullException("name_of_discipline");
             }
             else {
-                command.Parameters[0].Value = ((string)(name));
+                command.Parameters[0].Value = ((string)(name_of_discipline));
             }
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1970,7 +2040,7 @@ namespace laba2.DataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class teachersTableAdapter : global::System.ComponentModel.Component {
+    public partial class teachersssTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1984,7 +2054,7 @@ namespace laba2.DataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public teachersTableAdapter() {
+        public teachersssTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2136,20 +2206,25 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT id, name, surname, lastname, id_discipline FROM dbo.teachers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO [dbo].[teachers] ([name], [surname], [lastname], [id_discipline]) VAL" +
-                "UES (@name, @surname, @lastname, @id_discipline);";
+            this._commandCollection[1].CommandText = "DELETE FROM teachers\r\nWHERE  (id = @Original_id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@surname", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lastname", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "lastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_discipline", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_discipline", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO [dbo].[teachers] ([name], [surname], [lastname], [id_discipline]) VAL" +
+                "UES (@name, @surname, @lastname, @id_discipline);\r\n";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@surname", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "surname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lastname", global::System.Data.SqlDbType.VarChar, 25, global::System.Data.ParameterDirection.Input, 0, 0, "lastname", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_discipline", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_discipline", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2382,9 +2457,33 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(int Original_id) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(Original_id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int InsertQuery(string name, string surname, string lastname, global::System.Nullable<int> id_discipline) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((name == null)) {
                 throw new global::System.ArgumentNullException("name");
             }
@@ -2436,7 +2535,7 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class practiseTableAdapter : global::System.ComponentModel.Component {
+    public partial class practiseeeTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -2450,7 +2549,7 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public practiseTableAdapter() {
+        public practiseeeTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -2552,17 +2651,43 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
             tableMapping.ColumnMappings.Add("date_of_begining", "date_of_begining");
             tableMapping.ColumnMappings.Add("date_of_ending", "date_of_ending");
             tableMapping.ColumnMappings.Add("count_of_hours", "count_of_hours");
+            tableMapping.ColumnMappings.Add("id", "id");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[practise] WHERE (((@IsNull_id_of_teacher = 1 AND [id_of_teacher] IS NULL) OR ([id_of_teacher] = @Original_id_of_teacher)) AND ([date_of_begining] = @Original_date_of_begining) AND ([date_of_ending] = @Original_date_of_ending) AND ([count_of_hours] = @Original_count_of_hours) AND ([id] = @Original_id))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_of_teacher", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_of_teacher", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_of_teacher", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_of_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_of_begining", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_begining", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_of_ending", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_ending", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_count_of_hours", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "count_of_hours", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[practise] ([id_of_teacher], [date_of_begining], [date_of_endin" +
-                "g], [count_of_hours]) VALUES (@id_of_teacher, @date_of_begining, @date_of_ending" +
-                ", @count_of_hours)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[practise] ([id_of_teacher], [date_of_begining], [date_of_ending], [count_of_hours]) VALUES (@id_of_teacher, @date_of_begining, @date_of_ending, @count_of_hours);
+SELECT id_of_teacher, date_of_begining, date_of_ending, count_of_hours, id FROM practise WHERE (id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_of_teacher", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_of_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_of_begining", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_begining", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_of_ending", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_ending", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@count_of_hours", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "count_of_hours", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[practise] SET [id_of_teacher] = @id_of_teacher, [date_of_begining] = @date_of_begining, [date_of_ending] = @date_of_ending, [count_of_hours] = @count_of_hours WHERE (((@IsNull_id_of_teacher = 1 AND [id_of_teacher] IS NULL) OR ([id_of_teacher] = @Original_id_of_teacher)) AND ([date_of_begining] = @Original_date_of_begining) AND ([date_of_ending] = @Original_date_of_ending) AND ([count_of_hours] = @Original_count_of_hours) AND ([id] = @Original_id));
+SELECT id_of_teacher, date_of_begining, date_of_ending, count_of_hours, id FROM practise WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_of_teacher", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_of_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_of_begining", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_begining", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_of_ending", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_ending", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@count_of_hours", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "count_of_hours", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_id_of_teacher", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_of_teacher", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_of_teacher", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_of_teacher", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_of_begining", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_begining", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_date_of_ending", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_ending", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_count_of_hours", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "count_of_hours", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2575,21 +2700,27 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_of_teacher, date_of_begining, date_of_ending, count_of_hours FROM dbo.p" +
-                "ractise";
+            this._commandCollection[0].CommandText = "SELECT id_of_teacher, date_of_begining, date_of_ending, count_of_hours, id FROM d" +
+                "bo.practise";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "INSERT INTO [dbo].[practise] ([id_of_teacher], [date_of_begining], [date_of_endin" +
-                "g], [count_of_hours]) VALUES (@id_of_teacher, @begining, @ending, @hours)";
+            this._commandCollection[1].CommandText = "DELETE FROM practise\r\nWHERE  (id = @Original_id)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_of_teacher", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_of_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@begining", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_begining", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ending", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_ending", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@hours", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "count_of_hours", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "INSERT INTO [dbo].[practise] ([id_of_teacher], [date_of_begining], [date_of_endin" +
+                "g], [count_of_hours]) VALUES (@id_of_teacher, @date_of_begining, @date_of_ending" +
+                ", @count_of_hours);\r\n";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_of_teacher", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_of_teacher", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_of_begining", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_begining", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@date_of_ending", global::System.Data.SqlDbType.VarChar, 15, global::System.Data.ParameterDirection.Input, 0, 0, "date_of_ending", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@count_of_hours", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "count_of_hours", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2648,6 +2779,49 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(global::System.Nullable<int> Original_id_of_teacher, string Original_date_of_begining, string Original_date_of_ending, int Original_count_of_hours, int Original_id) {
+            if ((Original_id_of_teacher.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_id_of_teacher.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((Original_date_of_begining == null)) {
+                throw new global::System.ArgumentNullException("Original_date_of_begining");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_date_of_begining));
+            }
+            if ((Original_date_of_ending == null)) {
+                throw new global::System.ArgumentNullException("Original_date_of_ending");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_date_of_ending));
+            }
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_count_of_hours));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(global::System.Nullable<int> id_of_teacher, string date_of_begining, string date_of_ending, int count_of_hours) {
             if ((id_of_teacher.HasValue == true)) {
@@ -2688,28 +2862,123 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
-        public virtual int InsertQuery(global::System.Nullable<int> id_of_teacher, string begining, string ending, int hours) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> id_of_teacher, string date_of_begining, string date_of_ending, int count_of_hours, global::System.Nullable<int> Original_id_of_teacher, string Original_date_of_begining, string Original_date_of_ending, int Original_count_of_hours, int Original_id, int id) {
+            if ((id_of_teacher.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id_of_teacher.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            if ((date_of_begining == null)) {
+                throw new global::System.ArgumentNullException("date_of_begining");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(date_of_begining));
+            }
+            if ((date_of_ending == null)) {
+                throw new global::System.ArgumentNullException("date_of_ending");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(date_of_ending));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(count_of_hours));
+            if ((Original_id_of_teacher.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_of_teacher.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            if ((Original_date_of_begining == null)) {
+                throw new global::System.ArgumentNullException("Original_date_of_begining");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_date_of_begining));
+            }
+            if ((Original_date_of_ending == null)) {
+                throw new global::System.ArgumentNullException("Original_date_of_ending");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_date_of_ending));
+            }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_count_of_hours));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> id_of_teacher, string date_of_begining, string date_of_ending, int count_of_hours, global::System.Nullable<int> Original_id_of_teacher, string Original_date_of_begining, string Original_date_of_ending, int Original_count_of_hours, int Original_id) {
+            return this.Update(id_of_teacher, date_of_begining, date_of_ending, count_of_hours, Original_id_of_teacher, Original_date_of_begining, Original_date_of_ending, Original_count_of_hours, Original_id, Original_id);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteQuery(int Original_id) {
             global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((int)(Original_id));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int InsertQuery(global::System.Nullable<int> id_of_teacher, string date_of_begining, string date_of_ending, int count_of_hours) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
             if ((id_of_teacher.HasValue == true)) {
                 command.Parameters[0].Value = ((int)(id_of_teacher.Value));
             }
             else {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((begining == null)) {
-                throw new global::System.ArgumentNullException("begining");
+            if ((date_of_begining == null)) {
+                throw new global::System.ArgumentNullException("date_of_begining");
             }
             else {
-                command.Parameters[1].Value = ((string)(begining));
+                command.Parameters[1].Value = ((string)(date_of_begining));
             }
-            if ((ending == null)) {
-                throw new global::System.ArgumentNullException("ending");
+            if ((date_of_ending == null)) {
+                throw new global::System.ArgumentNullException("date_of_ending");
             }
             else {
-                command.Parameters[2].Value = ((string)(ending));
+                command.Parameters[2].Value = ((string)(date_of_ending));
             }
-            command.Parameters[3].Value = ((int)(hours));
+            command.Parameters[3].Value = ((int)(count_of_hours));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -2740,11 +3009,11 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         
         private UpdateOrderOption _updateOrder;
         
-        private disciplinesTableAdapter _disciplinesTableAdapter;
+        private disciplinesssTableAdapter _disciplinesssTableAdapter;
         
-        private teachersTableAdapter _teachersTableAdapter;
+        private teachersssTableAdapter _teachersssTableAdapter;
         
-        private practiseTableAdapter _practiseTableAdapter;
+        private practiseeeTableAdapter _practiseeeTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -2766,12 +3035,12 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public disciplinesTableAdapter disciplinesTableAdapter {
+        public disciplinesssTableAdapter disciplinesssTableAdapter {
             get {
-                return this._disciplinesTableAdapter;
+                return this._disciplinesssTableAdapter;
             }
             set {
-                this._disciplinesTableAdapter = value;
+                this._disciplinesssTableAdapter = value;
             }
         }
         
@@ -2780,12 +3049,12 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public teachersTableAdapter teachersTableAdapter {
+        public teachersssTableAdapter teachersssTableAdapter {
             get {
-                return this._teachersTableAdapter;
+                return this._teachersssTableAdapter;
             }
             set {
-                this._teachersTableAdapter = value;
+                this._teachersssTableAdapter = value;
             }
         }
         
@@ -2794,12 +3063,12 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public practiseTableAdapter practiseTableAdapter {
+        public practiseeeTableAdapter practiseeeTableAdapter {
             get {
-                return this._practiseTableAdapter;
+                return this._practiseeeTableAdapter;
             }
             set {
-                this._practiseTableAdapter = value;
+                this._practiseeeTableAdapter = value;
             }
         }
         
@@ -2822,17 +3091,17 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._disciplinesTableAdapter != null) 
-                            && (this._disciplinesTableAdapter.Connection != null))) {
-                    return this._disciplinesTableAdapter.Connection;
+                if (((this._disciplinesssTableAdapter != null) 
+                            && (this._disciplinesssTableAdapter.Connection != null))) {
+                    return this._disciplinesssTableAdapter.Connection;
                 }
-                if (((this._teachersTableAdapter != null) 
-                            && (this._teachersTableAdapter.Connection != null))) {
-                    return this._teachersTableAdapter.Connection;
+                if (((this._teachersssTableAdapter != null) 
+                            && (this._teachersssTableAdapter.Connection != null))) {
+                    return this._teachersssTableAdapter.Connection;
                 }
-                if (((this._practiseTableAdapter != null) 
-                            && (this._practiseTableAdapter.Connection != null))) {
-                    return this._practiseTableAdapter.Connection;
+                if (((this._practiseeeTableAdapter != null) 
+                            && (this._practiseeeTableAdapter.Connection != null))) {
+                    return this._practiseeeTableAdapter.Connection;
                 }
                 return null;
             }
@@ -2847,13 +3116,13 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._disciplinesTableAdapter != null)) {
+                if ((this._disciplinesssTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._teachersTableAdapter != null)) {
+                if ((this._teachersssTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._practiseTableAdapter != null)) {
+                if ((this._practiseeeTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -2867,30 +3136,30 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._disciplinesTableAdapter != null)) {
+            if ((this._disciplinesssTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.disciplines.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._disciplinesTableAdapter.Update(updatedRows));
+                    result = (result + this._disciplinesssTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._teachersTableAdapter != null)) {
+            if ((this._teachersssTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.teachers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._teachersTableAdapter.Update(updatedRows));
+                    result = (result + this._teachersssTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._practiseTableAdapter != null)) {
+            if ((this._practiseeeTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.practise.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._practiseTableAdapter.Update(updatedRows));
+                    result = (result + this._practiseeeTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -2904,27 +3173,27 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._disciplinesTableAdapter != null)) {
+            if ((this._disciplinesssTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.disciplines.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._disciplinesTableAdapter.Update(addedRows));
+                    result = (result + this._disciplinesssTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._teachersTableAdapter != null)) {
+            if ((this._teachersssTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.teachers.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._teachersTableAdapter.Update(addedRows));
+                    result = (result + this._teachersssTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._practiseTableAdapter != null)) {
+            if ((this._practiseeeTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.practise.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._practiseTableAdapter.Update(addedRows));
+                    result = (result + this._practiseeeTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -2938,27 +3207,27 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._practiseTableAdapter != null)) {
+            if ((this._practiseeeTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.practise.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._practiseTableAdapter.Update(deletedRows));
+                    result = (result + this._practiseeeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._teachersTableAdapter != null)) {
+            if ((this._teachersssTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.teachers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._teachersTableAdapter.Update(deletedRows));
+                    result = (result + this._teachersssTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._disciplinesTableAdapter != null)) {
+            if ((this._disciplinesssTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.disciplines.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._disciplinesTableAdapter.Update(deletedRows));
+                    result = (result + this._disciplinesssTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -3001,18 +3270,18 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._disciplinesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._disciplinesTableAdapter.Connection) == false))) {
+            if (((this._disciplinesssTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._disciplinesssTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._teachersTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._teachersTableAdapter.Connection) == false))) {
+            if (((this._teachersssTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._teachersssTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
-            if (((this._practiseTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._practiseTableAdapter.Connection) == false))) {
+            if (((this._practiseeeTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._practiseeeTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -3048,31 +3317,31 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._disciplinesTableAdapter != null)) {
-                    revertConnections.Add(this._disciplinesTableAdapter, this._disciplinesTableAdapter.Connection);
-                    this._disciplinesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._disciplinesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._disciplinesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._disciplinesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._disciplinesTableAdapter.Adapter);
+                if ((this._disciplinesssTableAdapter != null)) {
+                    revertConnections.Add(this._disciplinesssTableAdapter, this._disciplinesssTableAdapter.Connection);
+                    this._disciplinesssTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._disciplinesssTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._disciplinesssTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._disciplinesssTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._disciplinesssTableAdapter.Adapter);
                     }
                 }
-                if ((this._teachersTableAdapter != null)) {
-                    revertConnections.Add(this._teachersTableAdapter, this._teachersTableAdapter.Connection);
-                    this._teachersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._teachersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._teachersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._teachersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._teachersTableAdapter.Adapter);
+                if ((this._teachersssTableAdapter != null)) {
+                    revertConnections.Add(this._teachersssTableAdapter, this._teachersssTableAdapter.Connection);
+                    this._teachersssTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._teachersssTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._teachersssTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._teachersssTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._teachersssTableAdapter.Adapter);
                     }
                 }
-                if ((this._practiseTableAdapter != null)) {
-                    revertConnections.Add(this._practiseTableAdapter, this._practiseTableAdapter.Connection);
-                    this._practiseTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._practiseTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._practiseTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._practiseTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._practiseTableAdapter.Adapter);
+                if ((this._practiseeeTableAdapter != null)) {
+                    revertConnections.Add(this._practiseeeTableAdapter, this._practiseeeTableAdapter.Connection);
+                    this._practiseeeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._practiseeeTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._practiseeeTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._practiseeeTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._practiseeeTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -3133,17 +3402,17 @@ SELECT id, name, surname, lastname, id_discipline FROM teachers WHERE (id = @id)
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._disciplinesTableAdapter != null)) {
-                    this._disciplinesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._disciplinesTableAdapter]));
-                    this._disciplinesTableAdapter.Transaction = null;
+                if ((this._disciplinesssTableAdapter != null)) {
+                    this._disciplinesssTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._disciplinesssTableAdapter]));
+                    this._disciplinesssTableAdapter.Transaction = null;
                 }
-                if ((this._teachersTableAdapter != null)) {
-                    this._teachersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._teachersTableAdapter]));
-                    this._teachersTableAdapter.Transaction = null;
+                if ((this._teachersssTableAdapter != null)) {
+                    this._teachersssTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._teachersssTableAdapter]));
+                    this._teachersssTableAdapter.Transaction = null;
                 }
-                if ((this._practiseTableAdapter != null)) {
-                    this._practiseTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._practiseTableAdapter]));
-                    this._practiseTableAdapter.Transaction = null;
+                if ((this._practiseeeTableAdapter != null)) {
+                    this._practiseeeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._practiseeeTableAdapter]));
+                    this._practiseeeTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
