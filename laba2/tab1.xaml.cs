@@ -20,9 +20,11 @@ namespace laba2
     public partial class tab1 : Window
     {
         teachersssTableAdapter teachers = new teachersssTableAdapter();
+        public bool IsUpdating;
         public tab1()
         {
             InitializeComponent();
+
         }
 
         private void Add1_Click(object sender, RoutedEventArgs e)
@@ -34,6 +36,17 @@ namespace laba2
         {
             teachers.DeleteQuery((int)(Table.SelectedItem as DataRowView).Row[0]);
             Table.ItemsSource = teachers.GetData();
+        }
+
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            IsUpdating = true;
+            a1.Content = new Page1(this);
+        }
+
+        private void Table_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

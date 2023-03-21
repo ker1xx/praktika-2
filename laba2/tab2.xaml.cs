@@ -22,6 +22,7 @@ namespace laba2
     public partial class tab2 : Window
     {
         practiseeeTableAdapter prac = new practiseeeTableAdapter();
+        public bool IsUpdating;
         public tab2()
         {
             InitializeComponent();
@@ -31,12 +32,19 @@ namespace laba2
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
 
+            prac.DeleteQuery((int)(Table.SelectedItem as DataRowView).Row[0]);
+            Table.ItemsSource = prac.takenameeee();
         }
 
         private void Add1_Click(object sender, RoutedEventArgs e)
         {
-            prac.DeleteQuery((int)(Table.SelectedItem as DataRowView).Row[0]);
-            Table.ItemsSource = prac.GetData();
+            Frame.Content = new Page2(this);
+        }
+
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            IsUpdating = true;
+            Frame.Content = new Page2(this);
         }
     }
 }

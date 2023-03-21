@@ -39,7 +39,7 @@ namespace laba2
         private void tab2_Click(object sender, RoutedEventArgs e)
         {
             tab2 tab2 = new tab2();
-            tab2.Table.ItemsSource = table2.GetData();
+            tab2.Table.ItemsSource = table2.takenameeee();
             tab2.Show();
         }
 

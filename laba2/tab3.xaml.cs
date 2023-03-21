@@ -22,6 +22,7 @@ namespace laba2
     public partial class tab3 : Window
     {
         disciplinesssTableAdapter disc = new disciplinesssTableAdapter();
+        public bool IsUpdating;
         public tab3()
         {
             InitializeComponent();
@@ -37,6 +38,12 @@ namespace laba2
         {
             disc.DeleteQuery((int)(Table.SelectedItem as DataRowView).Row[0]);
             Table.ItemsSource = disc.GetData();
+        }
+
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            IsUpdating = true;
+            Frame.Content = new Page3(this);
         }
     }
 }
